@@ -1,0 +1,171 @@
+header.headline {
+    background: var(--hero-background);
+    padding: 1rem 1rem;
+}
+
+.hero {
+    padding-top: 8rem;
+}
+
+.hero .hero__intro {
+    color: var(--white);
+    text-align: center;
+    line-height: 1.35;
+    margin-bottom: 3rem;
+}
+
+.hero .top-headline {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.hero .hero__intro p {
+    font-size: 0.95rem;
+    color: var(--lightgray);
+    margin-bottom: 1rem;
+}
+
+.hero .hero__intro button {
+    background-color: var(--cta);
+    color: var(--white);
+    margin: 1rem 0;
+    padding: 0.5rem 2rem;
+    line-height: 1.5;
+    border-radius: 77px;
+    border: none;
+    border-color: #ff547e;
+}
+
+.hero .hero__links {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 4rem auto 0;
+    padding: 0 1rem 1rem;
+    height: 500px;
+    border-radius: 24px;
+    text-align: center;
+    transform: translateY(5%);
+    box-shadow: 0 -3px 9px 0 rgba(53, 72, 113, 0.15);
+}
+
+.hero__links .icons-wrapper {
+    height: 250px;
+    position: relative;
+}
+
+.hero .hero__links ul {
+    position: absolute;
+    top: -37px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero .hero__links ul img {
+    width: 112px;
+}
+
+.hero .hero__links ul h2 {
+    font-family: Poppins, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.hero .hero__links ul .media {
+    color: #4a80ff;
+}
+.hero .hero__links ul .pages {
+    color: #ff99b6;
+}
+.hero .hero__links ul .popups {
+    color: #7bdb94;
+}
+.hero .hero__links ul .embeds {
+    color: #6bd8f2;
+}
+
+.hero .hero__links .text-wrapper {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    color: #735c83;
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    .hero .hero__intro {
+        width: 80%;
+        margin: auto;
+    }
+    .hero .top-headline {
+        font-size: 2.1rem;
+    }
+    .hero .hero__intro p {
+        font-size: 1.5rem;
+        max-width: 500px;
+        margin: 0 auto 1.5rem;
+    }
+    .hero .hero__intro button {
+        padding: 0.6rem 2.3rem;
+        font-size: 1.2rem;
+    }
+    .hero .hero__links {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 3rem 1rem;
+        height: 327px;
+        justify-content: center;
+        transform: translateY(20%);
+    }
+    .hero .hero__links ul {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        flex-wrap: nowrap;
+        gap: 1.5rem;
+    }
+    .hero .hero__links ul h2 {
+        font-size: 1.2rem;
+    }
+    .hero .hero__links .text-wrapper {
+        font-size: 1.3rem;
+        max-width: 780px;
+        padding: 0 1.5rem;
+        margin: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero .hero__links ul img {
+        width: 150px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .hero .top-headline {
+        font-size: 3rem;
+    }
+    .hero .hero__intro p {
+        font-size: 1.5rem;
+        max-width: 500px;
+        margin: 0 auto 1.5rem;
+    }
+    .hero .hero__links {
+        margin-left: auto;
+        margin-right: auto;
+        transform: translateY(30%);
+    }
+    .hero .hero__links ul {
+        justify-content: space-between;
+    }
+    /* .hero .hero__links ul img {
+        width: 150px;
+    } */
+}
