@@ -21,6 +21,7 @@
 }
 
 body {
+    position: relative;
     font-family: "Roboto", sans-serif;
 }
 
@@ -44,8 +45,120 @@ ul {
 }
 /* reusable styles end here*/
 
-.wrapper.close-padding {
-    padding: 0.5rem 2rem;
+.backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    background: rgba(48, 48, 48, 0.6);
+    z-index: 9;
+    cursor: pointer;
+}
+
+.popup-modal {
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    display: none;
+    transform: translateX(-50%);
+    background: var(--white);
+    width: 90%;
+    height: 90vh;
+    max-width: 500px;
+    padding: 1rem;
+    border-radius: 10px;
+    z-index: 10;
+    overflow-y: scroll;
+}
+
+.popup-modal .info {
+    text-align: center;
+}
+
+.popup-modal .title {
+    width: 50%;
+    margin: auto;
+}
+
+.popup-modal .title img {
+    width: 100%;
+}
+
+.popup-modal .heading {
+    /* font-size: 1rem; */
+    margin-top: 1rem;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.popup-modal .info p:last-of-type {
+    margin: 1rem 0;
+    opacity: 0.5;
+}
+
+.popup-modal .user-box {
+    background: rgb(235, 235, 235);
+    padding: 1rem;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.popup-modal .user-icon img {
+    background: rgb(201, 201, 201);
+    border-radius: 50%;
+}
+
+.popup-modal .user-box form {
+    margin-top: 1rem;
+}
+
+.user-box form input {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.user-box form input:focus {
+    outline: none;
+}
+
+.user-box .check {
+    font-size: 0.8rem;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-box form .check input {
+    display: inline;
+    width: auto;
+}
+
+.user-box .check .help {
+    color: var(--footer-button);
+}
+
+.user-box form button {
+    background: var(--footer-button);
+    color: var(--white);
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.popup-modal .new-account {
+    margin: 1rem;
+    color: var(--footer-button);
+    text-align: center;
 }
 
 .nav-wrapper {
@@ -53,7 +166,7 @@ ul {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 4;
     transition: background 0.5s;
 }
 
@@ -112,9 +225,19 @@ nav .main-nav ul {
 
 nav .main-nav li {
     margin: 1.5rem 0;
+    transition: all 0.3s;
+}
+
+nav .main-nav li:hover {
+    transform: scale(1.1);
 }
 
 nav .main-nav li a {
+    display: inline-block;
+    cursor: pointer;
+}
+
+nav .main-nav li#modal-link {
     cursor: pointer;
 }
 
@@ -145,6 +268,15 @@ nav .translate-menu {
     background: var(--mobilenav-background);
 }
 
+.nav-wrapper .close-padding {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.open {
+    display: block;
+}
+
 main {
     min-height: 100vh;
 }
@@ -152,6 +284,18 @@ main {
 @media (min-width: 768px) {
     .wrapper {
         padding: 1.5rem 2rem;
+    }
+    .popup-modal {
+        top: 12%;
+        width: 80%;
+        height: 80vh;
+        border-radius: 12px;
+    }
+    .popup-modal .title {
+        width: 30%;
+    }
+    .popup-modal .user-box {
+        width: 80%;
     }
     nav .navbar {
         padding: 0 1rem;
@@ -169,6 +313,18 @@ main {
     .wrapper {
         padding-top: 1rem;
     }
+    .popup-modal {
+        top: 8%;
+        width: 50%;
+        height: auto;
+        overflow-y: hidden;
+    }
+    .popup-modal .title {
+        width: 20%;
+    }
+    .popup-modal .user-box {
+        width: 70%;
+    }
     nav .navbar {
         padding: 0;
     }
@@ -182,8 +338,8 @@ main {
         min-height: auto;
         font-size: 0.8rem;
         background: none;
-        transform: translateY(0);
-        z-index: 0;
+        /* transform: translateY(0); */
+        z-index: 1;
     }
     nav .main-nav ul {
         display: flex;
@@ -199,10 +355,8 @@ main {
 }
 
 @media (min-width: 1280px) {
-    /* .wrapper {
-        padding-top: 1rem;
-    } */
     nav .main-nav {
         flex-basis: 45%;
+        font-size: 1rem;
     }
 }

@@ -4,6 +4,20 @@
     padding: 5.5rem 1.5rem;
 }
 
+/* .footer-wrapper:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: 125% 50%;
+    background-position: bottom -190px center;
+    background-image: url(/images/footer-top.svg);
+    background-repeat: no-repeat;
+} */
+
 .footer-wrapper .footer-headline {
     padding-bottom: 2.5rem;
     text-align: center;
