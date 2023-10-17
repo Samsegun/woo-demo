@@ -243,7 +243,8 @@ nav .main-nav {
     top: -477px;
     left: 0;
     right: 0;
-    min-height: 400px;
+    min-height: 320px;
+    padding-bottom: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -369,7 +370,7 @@ main {
     nav .main-nav {
         /* transform: translateY(-25px); */
         font-size: 1.1rem;
-        min-height: 450px;
+        min-height: 365px;
     }
     nav .translate-menu {
         transform: translateY(-25px);
@@ -404,10 +405,11 @@ main {
     nav .main-nav {
         position: static;
         align-items: center;
-        flex-basis: 55%;
+        flex-basis: 45%;
         min-height: auto;
         font-size: 0.8rem;
         background: none;
+        padding-bottom: 0;
         /* transform: translateY(0); */
         z-index: 1;
     }
