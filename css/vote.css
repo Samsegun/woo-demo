@@ -7,7 +7,7 @@
 }
 
 .nav-wrapper {
-    background: var(--footer-button);
+    background: var(--hero-background);
 }
 
 .nav {
@@ -37,10 +37,6 @@
     grid-template-columns: 1fr;
     gap: 5rem;
     place-items: center;
-}
-
-.votes-container .vote-box {
-    /* margin: 5rem 0; */
 }
 
 .vote-container {
@@ -75,7 +71,7 @@
 }
 
 .vote-info button {
-    background: var(--footer-button);
+    background: var(--hero-background);
     color: var(--white);
     padding: 0.5rem 2rem;
     border-radius: 77px;
