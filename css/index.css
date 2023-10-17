@@ -409,7 +409,7 @@ main {
         min-height: auto;
         font-size: 0.8rem;
         background: none;
-        padding-bottom: 0;
+        padding: 1rem;
         /* transform: translateY(0); */
         z-index: 1;
     }
@@ -423,6 +423,7 @@ main {
     }
     nav .main-nav li {
         margin: 0;
+        font-weight: 500;
     }
     nav #modal-link {
         margin: 0;
