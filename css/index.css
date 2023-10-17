@@ -1,39 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url(base.css);
 @import url(headline.css);
 @import url(footer.css);
-
-:root {
-    --cta: #ff547e;
-    --lightgray: #f4f7fd;
-    --white: white;
-    --mobilenav-background: #112450;
-    --hero-background: #3b5da5;
-    --footer-background: #09132a;
-    --footer-button: #155dff;
-    --footer-list: #4a80ff;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    position: relative;
-    font-family: "Roboto", sans-serif;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
 
 /* reusable styles starts here*/
 .container {
@@ -160,15 +127,19 @@ ul {
 .user-box form button {
     background: #4a8bf5;
     color: var(--white);
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-box form .vote {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
     width: 100%;
     padding: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 .user-box form button svg {

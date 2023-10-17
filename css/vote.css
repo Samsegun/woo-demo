@@ -1,0 +1,105 @@
+@import url(base.css);
+
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1240px;
+}
+
+.nav-wrapper {
+    background: var(--footer-button);
+}
+
+.nav {
+    padding: 1rem 0;
+    color: var(--white);
+}
+
+.nav h1 {
+    font-family: "Open Sans", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.votes-box {
+    margin: 2rem 0;
+}
+
+.votes-heading {
+    font-size: 1.3rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.votes-container {
+    margin: 2.5rem 0 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    place-items: center;
+}
+
+.votes-container .vote-box {
+    /* margin: 5rem 0; */
+}
+
+.vote-container {
+    width: 280px;
+    height: 200px;
+    /* margin: 1rem 0; */
+}
+
+.vote-img {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.vote-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 1px 0px 1px 1px #eaeaea;
+}
+
+.vote-info {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+.vote-info span {
+    font-weight: 500;
+}
+
+.vote-info button {
+    background: var(--footer-button);
+    color: var(--white);
+    padding: 0.5rem 2rem;
+    border-radius: 77px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.vote-info button:hover {
+    transform: scale(1.05);
+}
+
+@media (min-width: 700px) {
+    .votes-container {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .votes-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 950px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
