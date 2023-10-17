@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url(headline.css);
 @import url(footer.css);
 
@@ -87,28 +88,34 @@ ul {
 }
 
 .popup-modal .heading {
-    /* font-size: 1rem; */
+    font-size: 1.2rem;
     margin-top: 1rem;
     font-weight: 400;
+    font-family: "Open Sans", sans-serif;
     opacity: 0.5;
 }
 
 .popup-modal .info p:last-of-type {
     margin: 1rem 0;
+    font-size: 0.9rem;
+    font-family: "Open Sans", sans-serif;
     opacity: 0.5;
 }
 
 .popup-modal .user-box {
-    background: rgb(235, 235, 235);
+    background: #f7f7f7;
     padding: 1rem;
     width: 100%;
     margin: auto;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 1px 1px #eaeaea;
 }
 
-.popup-modal .user-icon img {
-    background: rgb(201, 201, 201);
+.popup-modal .user-icon svg {
+    background: rgb(224, 224, 224);
+    width: 100%;
+    max-width: 50px;
     border-radius: 50%;
 }
 
@@ -122,7 +129,7 @@ ul {
     padding: 1rem;
     margin-bottom: 1rem;
     border: none;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .user-box form input:focus {
@@ -136,29 +143,64 @@ ul {
     justify-content: space-between;
 }
 
+.user-box .check div {
+    display: flex;
+    gap: 0.2rem;
+}
+
 .user-box form .check input {
     display: inline;
     width: auto;
 }
 
 .user-box .check .help {
-    color: var(--footer-button);
+    color: #4a8bf5;
 }
 
 .user-box form button {
-    background: var(--footer-button);
+    background: #4a8bf5;
     color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
     width: 100%;
     padding: 1rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
+}
+
+.user-box form button svg {
+    background-color: var(--white);
+    width: 22px;
+    height: 22px;
+    padding: 0.1rem;
+    border-radius: 50%;
 }
 
 .popup-modal .new-account {
     margin: 1rem;
     color: var(--footer-button);
     text-align: center;
+}
+
+.popup-modal .modal-bottom p:first-of-type {
+    margin-top: 2rem;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.popup-modal .modal-bottom p:last-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.popup-modal .modal-bottom img {
+    width: 16px;
 }
 
 .nav-wrapper {
@@ -291,6 +333,9 @@ main {
         height: 80vh;
         border-radius: 12px;
     }
+    .popup-modal .heading {
+        font-size: 2.2rem;
+    }
     .popup-modal .title {
         width: 30%;
     }
@@ -316,8 +361,12 @@ main {
     .popup-modal {
         top: 8%;
         width: 50%;
-        height: auto;
-        overflow-y: hidden;
+        height: 90vh;
+        max-height: 650px;
+    }
+    .popup-modal::-webkit-scrollbar {
+        width: 0;
+        scrollbar-width: none;
     }
     .popup-modal .title {
         width: 20%;
