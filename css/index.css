@@ -124,25 +124,38 @@
     color: #4a8bf5;
 }
 
-.user-box form button {
+/* .user-box form button {
     background: #4a8bf5;
     color: var(--white);
     width: 100%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
+} */
 
 .user-box form .vote {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    background: #4a8bf5;
     width: 100%;
     padding: 1rem;
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.user-box form button svg {
+/* .user-box form button svg {
+    background-color: var(--white);
+    width: 22px;
+    height: 22px;
+    padding: 0.1rem;
+    border-radius: 50%;
+} */
+
+.user-box form .vote svg {
     background-color: var(--white);
     width: 22px;
     height: 22px;
