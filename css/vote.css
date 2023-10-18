@@ -56,6 +56,12 @@
     height: 100%;
     border-radius: 10px;
     box-shadow: 1px 0px 1px 1px #eaeaea;
+    transition: transform 0.4s;
+}
+
+.vote-img img:hover {
+    transform: scaleX(1.01);
+    border-radius: 0;
 }
 
 .vote-info {
