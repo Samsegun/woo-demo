@@ -325,8 +325,18 @@ nav .translate-menu {
     display: block;
 }
 
-main {
+main.container {
     min-height: 100vh;
+    margin: 28rem auto 5rem;
+}
+
+.main-wrapper {
+    padding: 0 1rem;
+    height: inherit;
+}
+
+.main-wrapper .demo-text {
+    text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -358,6 +368,12 @@ main {
     }
     nav .translate-menu {
         transform: translateY(-25px);
+    }
+    main.container {
+        margin: 15rem auto 5rem;
+    }
+    .main-wrapper {
+        padding: 0 1.5rem;
     }
 }
 @media (min-width: 992px) {
@@ -417,5 +433,8 @@ main {
 @media (min-width: 1280px) {
     nav .main-nav {
         font-size: 1rem;
+    }
+    .main-wrapper {
+        padding: 0 2rem;
     }
 }
